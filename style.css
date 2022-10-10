@@ -245,13 +245,37 @@ footer{
     text-align: center;
 }
 
+
+.navigation .icon {
+    display: none;
+  }
+
+  .navigation {
+    overflow: hidden;
+    background-color: #333;
+  }
+
 @media screen and (max-width: 650px) {
+
+    .navigation a:not(:first-child) {display: none;}
+    .navigation a.icon {
+      float: right;
+      display: block;
+    }
+
+    .navigation.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+    /*  */
+
     .img-container{
         min-width: 80%;
         margin-left: -30px;
     }
-
-
+    
     .column1 {
         width: 100%;
     }
