@@ -1,0 +1,267 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    /* background-color: rgb(29, 29, 29); */
+}
+
+body{
+    background-color: rgb(29, 29, 29);
+    padding: 0%;
+    margin: 0%;
+}
+
+.homefield{
+    margin-left: 100px;
+}
+
+
+.navigation{
+    display: flex;
+    padding: 30px 50px;
+    background-color: rgba(29, 29, 29, 0.397);
+    top: -5px;
+    left: -5px;
+}
+
+.navigation a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.navigation a:hover {
+    color: rgb(255, 103, 103);
+    font-weight: bold;
+}
+
+.label{
+    text-align: center;
+    font-size: 300%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+/* Home */
+.homefield{
+    display: flex;
+    columns: 2;
+}
+
+.homefield div{
+    padding-top: 20%;
+}
+
+.homefield div h3{
+    font-size: 95px;
+    color: white;
+    margin-bottom: -4%;
+}
+
+.homefield div h4{
+    font-size: 45px;
+    color: rgb(255, 103, 103);
+}
+
+/* About me Field */
+
+.aboutmeform{
+    width: 100%;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+}
+
+.column1 {
+    float: left;
+}
+
+.img-container{
+    max-width: 25%;
+    padding-right: 20px;
+}
+
+img{
+    width: 100%;
+    border-radius: 5%;
+}
+
+.txt-content{
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-top: 60px;
+    max-width: 65%;
+}
+.aboutme-container div p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    width: 80%;
+    margin-bottom: 70px;
+}
+
+.aboutme-container div button{
+    background-color: red;
+    border-radius: 4px;
+    border-style: none;
+    color: #fff;
+    font-size: 16px;
+    min-height: 44px;
+    min-width: 10px;
+    padding: 9px 20px 8px;
+    text-align: center;
+    width: 20%;
+    min-width: 30%;
+}
+
+.aboutme-container div button a{
+    text-decoration: none;
+    color: white;
+}
+
+
+  /* Skills Form */
+.skillsform{
+    background-color: rgb(29, 29, 29);
+    color: white;
+    padding-left: 50px;
+    padding-top: 50px;
+    margin-bottom: 70px;
+}
+
+.column2 {
+    float: left;
+    width: 50%;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+.container {
+    width: 70%;
+    background-color: white;
+    border-radius: 100px;
+    height: 10px;
+}
+
+.skills {
+    height: 10px;
+    text-align: right;
+    color: white;
+    border-radius: 100px;
+}
+
+
+  .html {width: 50%; background-color: #f44336;}
+  .css {width: 45%; background-color: #808080;}
+  .react {width: 40%; background-color: #863e3e;}
+  .c {width: 80%; background-color: rgb(0, 0, 255);}
+  .java {width: 75%; background-color: #2195f39c;}
+  .mysql {width: 75%; background-color: #2196F3;}
+  .mssql {width: 65%; background-color: #375e7e;}
+  .nodejs {width: 35%; background-color: #9b5757;}
+  .javascript {width: 10%; background-color: #7a2f2f;}
+
+
+  
+  /* Contact Form*/
+.contactform{
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    padding-left: 40px;
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-content{
+    width: 50%;
+}
+
+.contactform p{
+    font-size: 150%;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.name, .email, .subject{
+    width: 100%;
+    height: 100%;
+    min-height: 45px;
+}
+
+
+.name, .email, .subject, textarea{
+    background-color: whitesmoke;  
+    border-style: solid;  
+    border-width: 0px 0px 1px 0px;  
+    border-color: black; 
+    outline:0; 
+    margin: 10px;
+}
+
+input:focus, textarea:focus{
+  border-width: 0px 0px 3px 0px;
+}
+
+.message{
+    width: 100%;
+    height: 150px; 
+}
+
+
+button{
+    background-color: rgb(29, 29, 29);
+    border-radius: 4px;
+    color: #fff;
+    width: 20%;
+    min-width: 100px;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+button:hover{
+opacity: .75;
+}
+
+
+  /* Footer*/
+footer{
+    background-color: rgb(29, 29, 29);
+    height: 2%;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.credits{
+    font-size: 18px;
+    text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+    .img-container{
+        min-width: 80%;
+        margin-left: -30px;
+    }
+
+
+    .column1 {
+        width: 100%;
+    }
+
+    .column2 {
+      min-width: 100%;
+    }
+    .container{
+        width: 100%;
+    }
+    .contact-content{
+        min-width: 80%;
+    }
+  }
