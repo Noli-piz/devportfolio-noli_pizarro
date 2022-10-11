@@ -8,15 +8,11 @@ body{
     margin: 0%;
 }
 
-.homefield{
-    margin-left: 100px;
-}
 
 
 .navigation{
     overflow: hidden;
     padding: 30px 50px;
-    background-color: rgba(29, 29, 29, 0.397);
     top: -5px;
     left: -5px;
 }
@@ -33,6 +29,12 @@ body{
     font-weight: bold;
 }
 
+.homefield{
+    margin-left: 100px;
+}
+
+
+
 .label{
     text-align: center;
     font-size: 300%;
@@ -42,6 +44,25 @@ body{
     margin-bottom: 40px;
 }
 
+.imagenav {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    right:5px;
+    top: 50px;
+  }
+  
+.imagenav img {
+    padding: 20px 0px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    height: 50px;
+    width: 50px;
+
+}
+  
+
 /* Home */
 .homefield{
     display: flex;
@@ -49,11 +70,14 @@ body{
 }
 
 .homefield div{
-    padding-top: 20%;
+    padding-top: 10%;
+    padding-bottom: 20%;
+
 }
 
-.homefield div h3{
-    font-size: 95px;
+.big-text{
+    font-size: 120px;
+    font-weight: bold;
     color: white;
     margin-bottom: -4%;
 }
@@ -269,6 +293,14 @@ footer{
       margin-left: 50px;
     }
 
+    .big-text{
+        font-size: 70px;
+    }
+    
+    .text{
+        font-size: 40px;
+    }
+
     .img-container{
         min-width: 60%;
         padding-right: 0px;
@@ -285,7 +317,7 @@ footer{
     }
 
     .column2 {
-      min-width: 100%;
+      min-width: 90%;
     }
     .container{
         width: 100%;
