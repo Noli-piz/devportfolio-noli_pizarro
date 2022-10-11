@@ -1,6 +1,6 @@
 *{
     font-family: 'Roboto', sans-serif;
-    /* background-color: rgb(29, 29, 29); */
+    background-color: white;
 }
 
 body{
@@ -91,7 +91,6 @@ img{
 .txt-content{
     margin-left: 40px;
     margin-right: 10px;
-    margin-top: 60px;
     max-width: 65%;
 }
 .aboutme-container div p{
