@@ -274,6 +274,12 @@ footer{
         padding-right: 0px;
     }
     
+    .txt-content{
+        margin-left: 0px;
+        margin-right: 0px;
+        max-width: 100%;
+    }
+    
     .column1 {
         width: 100%;
     }
