@@ -254,7 +254,7 @@ footer{
     overflow: hidden;
     background-color: #333;
   }
-
+/*
 @media screen and (max-width: 600px) {
 
     .navigation a:not(:first-child) {display: none;}
@@ -290,3 +290,4 @@ footer{
         min-width: 80%;
     }
   }
+*/
