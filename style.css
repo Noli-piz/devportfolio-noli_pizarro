@@ -273,6 +273,7 @@ footer{
     .img-container{
         min-width: 60%;
         margin-left: 10px;
+        padding: 0px;
     }
     
     .column1 {
