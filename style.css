@@ -15,7 +15,7 @@ body{
 
 
 .navigation{
-    display: flex;
+    overflow: hidden;
     padding: 30px 50px;
     background-color: rgba(29, 29, 29, 0.397);
     top: -5px;
@@ -112,7 +112,7 @@ img{
     padding: 9px 20px 8px;
     text-align: center;
     width: 20%;
-    min-width: 30%;
+    min-width: 150px;
 }
 
 .aboutme-container div button a{
@@ -250,26 +250,26 @@ footer{
     display: none;
   }
 
-  .navigation {
-    overflow: hidden;
-    background-color: #333;
-  }
-/*
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 650px) {
 
     .navigation a:not(:first-child) {display: none;}
     .navigation a.icon {
-      float: right;
+      float: left;
       display: block;
     }
 
-    .navigation.responsive a {
+    .navigation.responsive {position: relative;}
+    .navigation.responsive .icon {
+      position: absolute;
+    }
+
+    .navigation.responsive a:not(.icon) {
       float: none;
       display: block;
       text-align: left;
+      margin-left: 50px;
     }
-
-    /*  */
 
     .img-container{
         min-width: 80%;
@@ -290,4 +290,4 @@ footer{
         min-width: 80%;
     }
   }
-*/
+
