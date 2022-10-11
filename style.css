@@ -1,6 +1,5 @@
 *{
     font-family: 'Roboto', sans-serif;
-    background-color: white;
 }
 
 body{
@@ -271,7 +270,7 @@ footer{
     }
 
     .img-container{
-        
+        min-width: 40%;
         padding-right: 0px;
     }
     
