@@ -29,13 +29,6 @@ body{
     font-weight: bold;
 }
 
-.homefield{
-    margin-left: 100px;
-    min-height : 1080px;
-}
-
-
-
 .label{
     text-align: center;
     font-size: 300%;
@@ -66,6 +59,9 @@ body{
 
 /* Home */
 .homefield{
+    margin-left: 100px;
+    min-height : 1080px;
+    max-height : 1090px;
     display: flex;
     columns: 2;
 }
@@ -296,6 +292,7 @@ footer{
 
     .homefield{
         margin-left: 30px;
+        min-height : 900px;
     }
     
     .big-text{
