@@ -26,26 +26,9 @@
         <!-- Home Field -->
         <div class="homefield" id="home">
             <div class="typewriter">
-                <!-- <h1 class="big-text" id="big-text"> Hi, <br> I'm Noli Pizarro  </h1> -->
                 <h1 class="big-text" id="big-text">  </h1>
-                <!-- <h4 id="text"> Programmer / Freelancer </h4> -->
                 <h4 id="text">  </h4>
             </div>
-<!--             
-            <div class="imagenav">
-
-                <a href="https://github.com/Noli-piz" target="_blank">
-                    <img src="github.png">
-                </a>
-
-                <a href="https://www.youtube.com/channel/UCROcSdAXPC4jeUYArWKBLJA?view_as=subscriber" target="_blank">
-                    <img src="yt.png">
-                </a>
-
-                <a href="https://web.facebook.com/profile.php?id=100007738668860" target="_blank">
-                    <img src="fb.png">
-                </a>
-            </div> -->
         </div>
 
 
@@ -141,28 +124,84 @@
             </div>
         </div>
 
+    <!-- Certification Field -->
+    <!-- <div class="aboutmeform" id="about" >
+
+        <div class="label">
+            <label > AWARDS/CERTIFICATES_ </label>
+        </div>
+
+        <div className="card" style="height: 200px; width: 200px;">
+            <img className="card-img" src="https://www.w3schools.com/howto/img_avatar.png"  alt="Avatar"/>
+            <div className="card-data-container">
+                <h4> data.Name   </h4> 
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- Projects Field -->
+    <!-- <div class="skillsform" id="about" >
+
+        <div class="label">
+            <label > PROJECTS_ </label>
+        </div>
+
+        <div className="card" style="height: min-content; width: min-content;">
+            <img className="card-img" src="https://www.w3schools.com/howto/img_avatar.png"  alt="Logo"/>
+            <div className="card-data-container">
+                <div> iBarangay </div> 
+                <div>  github </div> 
+                <div>  used Language </div> 
+            </div>
+        </div>
+    </div> -->
 
 
     <!-- Contact Field -->
         <div class="contactform" id="contact" >
             <div class="label">
-                <label > CONTACT_ME_ </label>
+                <label > CONTACT_ </label>
             </div>
 
-            <div class="contact-content" >
-                <p> 
-                    I am interested in freelancing opportunities. However, if you other 
-                    concern please don't hesitate to contact me.
-                </p>
+            <div class="contact-and-links row">
+                <div class="contact-content column1">
+                    <p style="max-width: 90%; text-align: justify; text-justify: inter-word;"> 
+                        I am interested in freelancing opportunities. However, if you other 
+                        concern please don't hesitate to contact me.
+                    </p>
 
-                <form>
-                    <input type="text" placeholder="Name" class="name" />
-                    <input type="text" placeholder="Email" class="email" /> 
-                    <input type="text" placeholder="Subject" class="subject"/> 
-                    <textarea type="text" placeholder="Message" class="message"></textarea>
-                    <button> SEND </button>
-                </form>
+                    <form>
+                        <input type="text" placeholder="Name" class="name" />
+                        <input type="text" placeholder="Email" class="email" /> 
+                        <input type="text" placeholder="Subject" class="subject"/> 
+                        <textarea type="text" placeholder="Message" class="message"></textarea>
+                        <button> SEND </button>
+                    </form>
+                </div>
+                
+
+                <div class="media column2">
+                    <div> <img src="src/location-sign.png" style="width: 35px;">  <span style="font-size: 25pt;"> Manila, Philippines  </span>  </div>
+                    <br/>
+                    <div><span style="font-size: 20pt;"> Links  </span>  </div>
+
+                    <div class="imagenav">
+                        <a href="https://github.com/Noli-piz" target="_blank">
+                            <img src="src/github.png">
+                        </a>
+
+                        <a href="https://www.youtube.com/channel/UCROcSdAXPC4jeUYArWKBLJA?view_as=subscriber" target="_blank">
+                            <img src="src/yt.png">
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/noli-pizarro-5276a5241" target="_blank">
+                            <img src="src/linkedin.png">
+                        </a>
+                    </div>
+                </div>
             </div>
+
         </div>
     </main>
 
@@ -170,73 +209,84 @@
     <footer>
         <div class="credits">
             <label > © Noli Pizarro. All rights reserved. </label>
+            
         </div> 
     </footer>
 
     <script>
         function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "navigation") {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "navigation") {
             x.className += " responsive";
-          } else {
+            } else {
             x.className = "navigation";
-          }
+            }
         }
 
         const textDisplay = document.getElementById('big-text')
         const textDisplay2 = document.getElementById('text')
-        const phrases = ['Hi, <br> I\'m Noli Pizarro. ', 'Programmer / Freelancer']
         let i = 0
-        let j = 0 
-        let currentPhrase = []
+        let j = 0
+        let currentPhrase = ""
+        let currentPhrase2 = ""
         let isDeleting = false
+        let isNext = false
         let isEnd = false
-        let isDone = false
+
+        var txt = 'Hi, <br/> I\'m Noli Pizarro. ';
+        var txt2 = 'Programmer / Freelancer   ';
 
         function loop () {
-            isEnd = false
 
-            if (i < phrases.length) {
+            if(isNext === false){
 
-                if ( !isDone && !isDeleting && j <= phrases[i].length) {
-                    currentPhrase.push(phrases[i][j])
-                    j++
-                    textDisplay.innerHTML = currentPhrase.join('') + '_'
+                if (i < txt.length && isDeleting === false) {
+                    currentPhrase += (txt.charAt(i))
+                    if(txt.charAt(i) !== "<"){
+                        textDisplay.innerHTML = currentPhrase;
+                    }
+                    i++;
+                    if(i >= txt.length){
+                        isNext =true
+                    }
                 }
-                
-
-                if ( isDone && j <= phrases[i].length) {
-                    currentPhrase.push(phrases[i][j])
-                    j++
-                    textDisplay2.innerHTML = currentPhrase.join('') + '_'
-                }
-
-
-                if(isDeleting && j <= phrases[i].length) {
-                    // currentPhrase.pop(phrases[i][j])
-                    j=0
-                    textDisplay.innerHTML = currentPhrase.join('')
+                else {
+                    textDisplay.innerHTML =  currentPhrase.slice(0,i);
+                    i--;
+                    if(i < 0){
+                        isDeleting = false
+                        currentPhrase=""
+                    }
                 }
 
-                if (j == phrases[i].length) {
-                    isEnd = true
-                    isDeleting = true
-                }
+            // Next Text
+            } else {
+                if (j < txt.length && isDeleting === false) {
+                currentPhrase2 += (txt2.charAt(j))
+                textDisplay2.innerHTML = currentPhrase2;
 
-                if (isDeleting && j === 0) {
-                currentPhrase = []
-                isDeleting = false
-                isDone = true
-                i++
-                if (i === phrases.length) {
-                    i = 0
-                }
+                j++;
+                if(j >= txt2.length){
+                    isDeleting=true
                 }
             }
+            else {
+                textDisplay2.innerHTML =  currentPhrase2.slice(0,j);
+                j--;
+                if(j < 0){
+                    isDeleting = true
+                    isNext = false
+                    currentPhrase2= ""
+                }
+            }
+            }
+
+
+            
             const spedUp = Math.random() * (70 -50) + 50
-            const normalSpeed = Math.random() * (200 -100) +50
+            const normalSpeed = Math.random() * (200 -100) + 50
             time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed
-            setTimeout(loop, time)
+            setTimeout(loop, time);
         }
 
         loop()
